@@ -1,16 +1,37 @@
 [
   {
     "id": 1,
-    "name": "Perfume",
-    "desc": "Miguel Rousseouf",
-    "value": "100.00",
-    "image": "https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/volarium/catalog/produtos/volarium/perfume/perfume-feminino/perfume-feminino-ch-tradicional-importado-original.jpg"
+    "name": "Bonnie",
+    "desc": "Coelho Roxo",
+    "value": "10000.00",
+    "image": "../assets/Bonnie.png"
   },
   {
     "id": 2,
-    "name": "Colar",
-    "desc": "Jand Karno em perolas",
-    "value": "2200.00",
-    "image": "https://cdn.awsli.com.br/600x450/1537/1537341/produto/152389745/01e29e7fcc.jpg"
+    "name": "Freddy",
+    "desc": "Urso Marrom",
+    "value": "5400.00",
+    "image": "../assets/Freddy.png"
+  },
+  {
+    "id": 3,
+    "name": "Chica",
+    "desc": "Galinha Amarela",
+    "value": "3500.00",
+    "image": "../assets/Chica.png"
+  },
+  {
+    "id": 4,
+    "name": "Foxy",
+    "desc": "Raposa Vermelha",
+    "value": "2400.00",
+    "image": "../assets/foxy.png"
+  },
+  {
+    "id": 5,
+    "name": "GoldenFreddy",
+    "desc": "Urso Dourado",
+    "value": "100000.00",
+    "image": "../assets/GoldenFreddy.png"
   }
 ]
