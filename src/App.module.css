@@ -42,3 +42,8 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.tamanho{
+  width: 500px;
+  height: 500px;
+}

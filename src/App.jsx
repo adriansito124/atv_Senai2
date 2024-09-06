@@ -5,6 +5,13 @@ import produtos from './constants/produtos.json'
 import { api } from "./api/rmApi"
 import style from './App.module.css'
 
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'; // Importa Marker e Popup
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
+import "leaflet-defaulticon-compatibility";
+
+
+
 function App() {
   const [show, setShow] = useState("")
   const [data, setData] = useState([])
@@ -71,7 +78,17 @@ function App() {
         <>
       <h2>Mapa</h2>
           <div>
-              mapa aqui
+          <MapContainer className={style.tamanho} center={[-25.421549, -49.2835415]} zoom={13} scrollWheelZoom={false}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[-25.421549, -49.2835415, 21]}>
+              <Popup>
+                Senai <br /> Centro
+              </Popup>
+            </Marker>
+          </MapContainer>
           </div>
          </>
       }
