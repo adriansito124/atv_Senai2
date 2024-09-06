@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Card } from './components/Card'
+import { CardApi } from './components/CardApi'
+import { CardProdutos } from './components/CardProdutos'
 import produtos from './constants/produtos.json'
 import { api } from "./api/rmApi"
 import style from './App.module.css'
@@ -39,7 +40,7 @@ function App() {
             <div>
             {produtos.map((item) => {
               return(
-                <Card name={item.name} desc={item.desc} value={item.value} image={item.image} key={item.id} status={item.status}/>
+                <CardProdutos name={item.name} desc={item.desc} value={item.value} image={item.image} key={item.id} status={item.status}/>
               )
              })}
             </div>
@@ -55,7 +56,7 @@ function App() {
             {data.map((item) => { 
              return(
               <div key={item.id}>
-                <Card name={item.name} desc={item.species} value={item.gender} image={item.image} />
+                <CardApi name={item.name} desc={item.species} value={item.gender} image={item.image} />
                 {/* <button onClick={() => {}}>Info</button> */}
               </div>
               )
