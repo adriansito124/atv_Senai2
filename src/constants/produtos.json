@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Bonnie",
     "desc": "Coelho Roxo",
-    "value": "10000.00",
-    "image": "../assets/Bonnie.png",
+    "value": "8000.00",
+    "image": "../../src/assets/Bonnie.png",
     "categoria": "coelho",
     "status": true
   },
@@ -13,7 +13,7 @@
     "name": "Freddy",
     "desc": "Urso Marrom",
     "value": "5400.00",
-    "image": "../assets/Freddy.png",
+    "image": "../../src/assets/Freddy.png",
     "categoria": "urso",
     "status": false
   },
@@ -22,7 +22,7 @@
     "name": "Chica",
     "desc": "Galinha Amarela",
     "value": "3500.00",
-    "image": "../assets/Chica.png",
+    "image": "../../src/assets/Chica.png",
     "categoria": "galinha",
     "status": true
   },
@@ -31,16 +31,16 @@
     "name": "Foxy",
     "desc": "Raposa Vermelha",
     "value": "2400.00",
-    "image": "../assets/foxy.png",
+    "image": "../../src/assets/foxy.png",
     "categoria": "raposa",
     "status": false
   },
   {
     "id": 5,
-    "name": "GoldenFreddy",
+    "name": "Golden Freddy",
     "desc": "Urso Dourado",
     "value": "100000.00",
-    "image": "../assets/GoldenFreddy.png",
+    "image": "../../src/assets/GoldenFreddy.png",
     "categoria": "urso",
     "status": false
   }
