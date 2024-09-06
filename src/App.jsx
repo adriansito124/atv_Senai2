@@ -17,7 +17,7 @@ function App() {
   const [data, setData] = useState([])
   const [page, setPage] = useState("")
   const [name, setName] = useState("")
-
+  const position = [-25.4249407, -49.2723473]
 
   useEffect(() => {
     api.get(`/character/?page=${page}&name=${name}`).then((response) => {
@@ -77,19 +77,19 @@ function App() {
      {show === "map" &&
         <>
       <h2>Mapa</h2>
-          <div>
-          <MapContainer className={style.tamanho} center={[-25.421549, -49.2835415]} zoom={13} scrollWheelZoom={false}>
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[-25.421549, -49.2835415, 21]}>
-              <Popup>
-                Senai <br /> Centro
-              </Popup>
-            </Marker>
-          </MapContainer>
-          </div>
+         
+          <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{width: "500px", height:"500px"}}>
+    <TileLayer
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+    <Marker position={position}>
+      <Popup>
+        A pretty CSS3 popup. <br /> Easily customizable.
+      </Popup>
+    </Marker>
+  </MapContainer>
+       
          </>
       }
     </div>
