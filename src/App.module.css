@@ -28,3 +28,11 @@
   flex-wrap: wrap;
   gap: 30px;
 }
+
+.organizar{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}

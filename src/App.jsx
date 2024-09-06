@@ -52,7 +52,7 @@ function App() {
             <div>
                <input type="text" placeholder="1/43" value={page} onChange={(event) => setPage(event.target.value)}/>
             </div>
-            <div>
+            <div className={style.organizar}>
             {data.map((item) => { 
              return(
               <div key={item.id}>
