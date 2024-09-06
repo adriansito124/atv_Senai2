@@ -20,6 +20,7 @@ function App() {
     }).catch((error) => {
       if(error.response.status === 404){
         console.log("Esta pagina nao contem este personagem")
+        alert("Esta pagina não contem este personagem")
       }
       console.error(error)
     })
