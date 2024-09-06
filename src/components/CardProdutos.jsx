@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import style from '../Produtos.module.css'
+import style from '../Card.module.css'
 
 export const CardProdutos = ({ name, desc, value, image, key, status }) => {
   

@@ -56,7 +56,7 @@ function App() {
             {data.map((item) => { 
              return(
               <div key={item.id}>
-                <CardApi name={item.name} desc={item.species} value={item.gender} image={item.image} />
+                <CardApi name={item.name} desc={item.species} value={item.gender} image={item.image} status={item.status} type={item.type}/>
                 {/* <button onClick={() => {}}>Info</button> */}
               </div>
               )
