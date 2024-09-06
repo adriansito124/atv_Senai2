@@ -36,3 +36,9 @@
   flex-wrap: wrap;
   gap: 15px;
 }
+
+.inputz{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
