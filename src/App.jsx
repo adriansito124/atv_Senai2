@@ -82,9 +82,9 @@ function App() {
             <div className={style.organizar}>
             {data.map((item) => { 
              return(
-              <div key={item.id}>
+              <div key={item.id} className={style.centrelizarr}>
                 <CardApi name={item.name} desc={item.species} value={item.gender} image={item.image} status={item.status} type={item.type}/>
-                {/* <button onClick={() => {}}>Info</button> */}
+                {<button onClick={() => {}}>Info</button>}
               </div>
               )
            })}
@@ -134,9 +134,9 @@ function App() {
                   <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
                 </LineChart>
               </div>
-              <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
+              {/* <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
                 <div>👽</div>
-              </Tilt>
+              </Tilt> */}
           </div>
         </>
       }
