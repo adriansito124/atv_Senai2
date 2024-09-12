@@ -43,3 +43,9 @@
   justify-content: space-around;
 }
 
+.centrelizarr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
