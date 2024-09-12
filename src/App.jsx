@@ -4,6 +4,7 @@ import { CardProdutos } from './components/CardProdutos'
 import produtos from './constants/produtos.json'
 import { api } from "./api/rmApi"
 import style from './App.module.css'
+import { Tilt } from 'react-tilt'
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'; // Importa Marker e Popup
 import 'leaflet/dist/leaflet.css';
@@ -22,6 +23,17 @@ function App() {
   const grafico = [{name: 'Adrian', uv: 1.90, amt: 2}, {name: 'Lorena', uv: 1.72, amt: 2}, {name: 'Yasmin', uv: 1.65, amt: 2}, {name: 'Marcio', uv: 1.95, amt: 2}, {name: 'Flavia', uv: 1.68, amt: 2}, {name: 'Vô', uv: 1.78, amt: 2}];
   const grafico2 = [{name: 'Adrian', uv: 18, amt: 100}, {name: 'Lorena', uv: 19, amt: 100}, {name: 'Yasmin', uv: 15, amt: 100}, {name: 'Marcio', uv: 55, amt: 100}, {name: 'Flavia', uv: 46, amt: 100}, {name: 'Vô', uv: 82, amt: 100}];
 
+  const defaultOptions = {
+    reverse:        false,  // reverse the tilt direction
+    max:            35,     // max tilt rotation (degrees)
+    perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+    scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+    speed:          1000,   // Speed of the enter/exit transition
+    transition:     true,   // Set a transition on enter/exit.
+    axis:           null,   // What axis should be disabled. Can be X or Y.
+    reset:          true,    // If the tilt effect has to be reset on exit.
+    easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+  }
 
   useEffect(() => {
     api.get(`/character/?page=${page}&name=${name}`).then((response) => {
@@ -122,6 +134,9 @@ function App() {
                   <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
                 </LineChart>
               </div>
+              <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
+                <div>👽</div>
+              </Tilt>
           </div>
         </>
       }
